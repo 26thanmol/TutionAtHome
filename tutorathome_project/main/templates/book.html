@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="booking-bg">
+    <div class="booking-card">
+
+        <h2>📚 Book a Tutor in Jabalpur</h2>
+        <p>Fill details and get a tutor within 24 hours</p>
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <input type="text" name="name" placeholder="👤 Your Name" required>
+
+            <select name="class" required>
+                <option value="">🎓 Select Class</option>
+                <option>Class 1-5</option>
+                <option>Class 6-8</option>
+                <option>Class 9-10</option>
+                <option>Class 11-12</option>
+            </select>
+
+            <input type="text" name="subject" placeholder="📖 Subject (Math, Science...)" required>
+
+            <!-- 🔥 JABALPUR AREAS -->
+            <select name="city" required>
+                <option value="">📍 Select Area</option>
+                <option>Gwarighat</option>
+                <option>Napier Town</option>
+                <option>Adhartal</option>
+                <option>Madan Mahal</option>
+                <option>Sadar</option>
+                <option>Vijay Nagar</option>
+                <option>Kachnar City</option>
+                <option>Wright Town</option>
+                <option>Ranjhi</option>
+            </select>
+
+            <button type="submit">🚀 Submit Request</button>
+        </form>
+
+    </div>
+</div>
+
+{% endblock %}
